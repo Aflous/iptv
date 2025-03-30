@@ -24,7 +24,7 @@ No need to install dependencies — `uv` handles everything via the shebang.
 ### Download M3U
 
 ```bash
-uv run ipp.py download
+uv run iptv.py download
 ```
 
 Downloads the playlist to `playlist.m3u`.
@@ -32,21 +32,21 @@ Downloads the playlist to `playlist.m3u`.
 ### Filter Playlist
 
 ```bash
-uv run ipp.py filter-streams --tokens "action" "sports"
+uv run iptv.py filter-streams --tokens "action" "sports"
 ```
 
-Filters entries with `"action"` or `"sports"` in their title. Saves output to `filtered.m3u`.
+Filters entries containing **both** `"action"` and `"sports"` in their title. Saves output to `filtered.m3u`.
 
 You can optionally specify input/output files:
 
 ```bash
-uv run ipp.py filter-streams --tokens "news" --input-file custom.m3u --output-file news_only.m3u
+uv run iptv.py filter-streams --tokens "news" --input-file custom.m3u --output-file news_only.m3u
 ```
 
 ## Notes
 
 - The `playlist.m3u` filename is used by default for both download and filter.
-- Filtering is **case-insensitive** and **non-regex**.
+- Filtering is **case-insensitive**.
 
 ---
 
